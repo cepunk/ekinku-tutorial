@@ -1,0 +1,2548 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+<title>Tutorial Interaktif e-Kinku — Panduan Lengkap dari Nol Sampai Siap Pakai</title>
+<meta name="description" content="Panduan interaktif bergerak langkah demi langkah menggunakan aplikasi e-Kinku untuk menyiapkan bukti dukung e-Kinerja BKN di Google Drive pribadi. Dilengkapi Mode Tonton Bersuara & Mode Latihan.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#2563eb">
+<link rel="canonical" href="https://tutorial.ekinerja.biz.id/">
+
+<!-- Open Graph / WhatsApp Preview -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tutorial Interaktif e-Kinku">
+<meta property="og:title" content="Tutorial Interaktif e-Kinku — Belajar Pakai e-Kinku dari Nol Sampai Mahir">
+<meta property="og:description" content="Simulasi bergerak lengkap dengan suara pemandu dan Mode Latihan interaktif untuk ASN & PPPK. Coba langsung dari HP atau laptop.">
+<meta property="og:url" content="https://tutorial.ekinerja.biz.id/">
+<meta property="og:image" content="https://ekinerja.biz.id/og-cover.png">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://ekinerja.biz.id/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://ekinerja.biz.id/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #f8fafc;
+  --bg-soft: #eff6ff;
+  --card: #ffffff;
+  --fg: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.1);
+  --ok: #16a34a;
+  --ok-soft: rgba(22, 163, 74, 0.12);
+  --warn: #d97706;
+  --warn-soft: rgba(217, 119, 6, 0.12);
+  --err: #dc2626;
+  --stage-bg: #0f172a;
+  --radius: 16px;
+  --shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.1);
+}
+html[data-theme="dark"] {
+  --bg: #0b1120;
+  --bg-soft: #111c33;
+  --card: #162033;
+  --fg: #f8fafc;
+  --muted: #94a3b8;
+  --line: #26354d;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-soft: rgba(59, 130, 246, 0.16);
+  --ok: #22c55e;
+  --ok-soft: rgba(34, 197, 94, 0.16);
+  --warn: #f59e0b;
+  --warn-soft: rgba(245, 158, 11, 0.16);
+  --stage-bg: #060b14;
+  --shadow: 0 14px 36px -8px rgba(0, 0, 0, 0.5);
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font: inherit; cursor: pointer; }
+
+/* Header / Top Navigation */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 16px;
+}
+html[data-theme="dark"] .top-nav {
+  background: rgba(15, 23, 42, 0.9);
+}
+.top-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--fg);
+  text-decoration: none !important;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+  background: #2563eb;
+}
+.brand-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--fg);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+}
+.btn:hover { border-color: var(--accent); }
+.btn:active { transform: scale(0.98); }
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 16px -4px rgba(37, 99, 235, 0.45);
+}
+.btn.primary:hover { background: var(--accent-hover); }
+.btn.ok {
+  background: var(--ok);
+  border-color: var(--ok);
+  color: #fff;
+}
+.btn.wa {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+.btn.sm {
+  min-height: 32px;
+  padding: 0 10px;
+  font-size: 11.5px;
+  border-radius: 8px;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 14px 48px;
+}
+
+/* Disclaimer Banner (Wajib di Pembuka & Penutup) */
+.disclaimer-bar {
+  background: var(--bg-soft);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+.disclaimer-bar strong { color: var(--accent); }
+
+/* Resume Saved Progress Banner */
+.resume-banner {
+  background: var(--ok-soft);
+  border: 1px solid rgba(22, 163, 74, 0.35);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12.5px;
+}
+
+/* Step Progress Rail */
+.rail-wrap {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow);
+}
+.rail-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.rail-progress-txt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.rail-bar-bg {
+  width: 100%;
+  height: 6px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.rail-bar-fill {
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(90deg, #2563eb, #16a34a);
+  border-radius: 999px;
+  transition: width 0.35s ease;
+}
+.step-rail {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+.step-node {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+}
+.step-node:hover {
+  border-color: var(--accent);
+  color: var(--fg);
+}
+.step-node .sn-num {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 800;
+}
+.step-node.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.step-node.active .sn-num {
+  background: #fff;
+  color: var(--accent);
+}
+.step-node.done {
+  border-color: rgba(22, 163, 74, 0.45);
+  background: var(--ok-soft);
+  color: var(--ok);
+}
+.step-node.done .sn-num {
+  background: var(--ok);
+  color: #fff;
+}
+
+/* Main Interactive Workspace Grid (Guide Panel + Living Stage) */
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 960px) {
+  .tutorial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Column: Narrative & Controls */
+.guide-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.step-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.guide-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.guide-summary {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin: 0 0 14px;
+}
+
+/* Mode Switcher: Tonton Otomatis vs Latihan Sendiri */
+.mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  margin-bottom: 14px;
+}
+.mode-btn {
+  padding: 8px 10px;
+  border-radius: 9px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.mode-btn.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.28);
+}
+
+/* Beat List (3-5 Beats per Step) */
+.beat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.beat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.beat-item:hover {
+  border-color: var(--accent);
+}
+.beat-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--line);
+  color: var(--fg);
+  font-size: 11px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.beat-item.active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.beat-item.active .beat-num {
+  background: var(--accent);
+  color: #fff;
+}
+.beat-item.done {
+  border-color: rgba(22, 163, 74, 0.4);
+}
+.beat-item.done .beat-num {
+  background: var(--ok);
+  color: #fff;
+}
+
+/* Extra Tip Box inside Guide */
+.guide-tip {
+  background: var(--warn-soft);
+  border-left: 4px solid var(--warn);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+/* "Sudah Bisa" Check Row */
+.mastery-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--ok-soft);
+  border: 1px solid rgba(22, 163, 74, 0.35);
+  margin-bottom: 14px;
+}
+.mastery-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.mastery-label input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ok);
+  cursor: pointer;
+}
+
+/* Guide Navigation Buttons */
+.guide-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Right Column: Persistent Living Stage */
+.stage-shell {
+  background: var(--stage-bg);
+  border-radius: 20px;
+  border: 2px solid #1e293b;
+  box-shadow: 0 24px 60px -15px rgba(2, 6, 23, 0.65);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Stage Top Bar */
+.stage-topbar {
+  background: #1e293b;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #334155;
+  color: #e2e8f0;
+  font-size: 11.5px;
+}
+.sim-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 11px;
+}
+.stage-top-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.st-btn {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.st-btn:hover { border-color: #60a5fa; color: #fff; }
+.st-btn.on {
+  background: rgba(37, 99, 235, 0.25);
+  border-color: #60a5fa;
+  color: #93c5fd;
+}
+
+/* Camera Viewport */
+.stage-viewport {
+  position: relative;
+  min-height: 520px;
+  padding: 22px 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.22), transparent 48%),
+    radial-gradient(circle at 80% 80%, rgba(22, 163, 74, 0.16), transparent 48%),
+    #0b1120;
+}
+@media (max-width: 600px) {
+  .stage-viewport {
+    min-height: 470px;
+    padding: 14px 8px 22px;
+  }
+}
+
+/* Camera Rig (Smooth Zoom & Pan — NOT Slide Cuts) */
+.camera-rig {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+/* Persistent Device Frame (Morphs smoothly between Phone & Desktop Split-View) */
+.device-frame {
+  width: 360px;
+  max-width: 100%;
+  background: #f6f8fc;
+  color: #0f172a;
+  border-radius: 26px;
+  border: 6px solid #334155;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1), border-radius 0.6s ease;
+  position: relative;
+}
+.device-frame.desktop-split {
+  width: 740px;
+  border-radius: 16px;
+  border-width: 4px;
+}
+
+/* Simulated Browser / Phone Status Header */
+.df-browser-bar {
+  background: #e2e8f0;
+  padding: 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+  color: #334155;
+  border-bottom: 1px solid #cbd5e1;
+}
+.df-url-pill {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-weight: 600;
+  color: #0f172a;
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Split-View Layout inside Device Frame */
+.df-workspace {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.device-frame.desktop-split .df-workspace {
+  grid-template-columns: 1.05fr 0.95fr;
+}
+@media (max-width: 680px) {
+  .device-frame.desktop-split .df-workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* e-Kinku App Replica Surface */
+.ekinku-surface {
+  padding: 12px;
+  min-height: 410px;
+  background: #f6f8fc;
+  position: relative;
+}
+.ek-topbar {
+  background: #ffffff;
+  border: 1px solid #d9e1ee;
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.ek-brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 800;
+  font-size: 13px;
+}
+.ek-brand img {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+}
+.ek-chip {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(217, 119, 6, 0.14);
+  color: #b45309;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.ek-chip.ok {
+  background: rgba(22, 163, 74, 0.14);
+  color: #15803d;
+}
+
+/* Mockup Layers inside Persistent e-Kinku Surface */
+.ek-layer {
+  display: none;
+  animation: fadeIn 0.28s ease;
+}
+.ek-layer.visible {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ek-card {
+  background: #ffffff;
+  border: 1px solid #d9e1ee;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+.ek-card h4 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 800;
+}
+.ek-muted {
+  color: #5b667a;
+  font-size: 11px;
+  margin: 0 0 8px;
+}
+.ek-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+}
+.ek-input.filled {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+.ek-btn {
+  width: 100%;
+  min-height: 36px;
+  padding: 7px 12px;
+  border-radius: 9px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  position: relative;
+  transition: all 0.18s ease;
+}
+.ek-btn.primary {
+  background: #1f6feb;
+  border-color: #1f6feb;
+  color: #ffffff;
+}
+.ek-btn.wa {
+  background: #25d366;
+  border-color: #25d366;
+  color: #ffffff;
+}
+.ek-btn.ok {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+/* Practice Hotspot Highlight */
+.hotspot-target {
+  outline: 3px solid #3b82f6 !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.28) !important;
+  animation: pulseHotspot 1.3s infinite;
+  cursor: pointer !important;
+}
+@keyframes pulseHotspot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35); }
+  50% { box-shadow: 0 0 0 9px rgba(59, 130, 246, 0.08); }
+}
+
+/* Portal e-Kinerja BKN Replica Surface (Right side in Split-View) */
+.bkn-surface {
+  display: none;
+  padding: 12px;
+  background: #f1f5f9;
+  border-left: 2px dashed #94a3b8;
+  min-height: 410px;
+}
+.device-frame.desktop-split .bkn-surface {
+  display: block;
+}
+.bkn-head {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 11.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Animated Stage Cursor */
+.stage-cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease;
+}
+.stage-cursor.visible { opacity: 1; }
+.stage-cursor svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+  transition: transform 0.14s ease;
+}
+.stage-cursor.clicking svg {
+  transform: scale(0.8);
+}
+.cursor-ripple {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2.5px solid #60a5fa;
+  opacity: 0;
+  transform: scale(0.4);
+}
+.stage-cursor.clicking .cursor-ripple {
+  animation: ripplePop 0.45s ease-out;
+}
+@keyframes ripplePop {
+  0% { opacity: 1; transform: scale(0.4); }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+.cursor-pill {
+  position: absolute;
+  left: 24px;
+  top: 16px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Subtitle / Feedback Bar at Bottom of Stage */
+.stage-caption-bar {
+  background: #090e1a;
+  border-top: 1px solid #1e293b;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.stage-caption-txt {
+  color: #f8fafc;
+  font-size: 13px;
+  line-height: 1.45;
+  flex: 1;
+}
+.stage-caption-txt strong { color: #93c5fd; }
+.practice-feedback {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+.practice-feedback.warn {
+  background: rgba(245, 158, 11, 0.22);
+  color: #fcd34d;
+}
+.practice-feedback.ok {
+  background: rgba(22, 163, 74, 0.25);
+  color: #86efac;
+}
+
+/* Closing Section: Checklist "Kamu Sudah Siap" + FAQ + WA CS */
+.closing-sec {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 840px) {
+  .closing-sec { grid-template-columns: 1fr; }
+}
+.closing-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.closing-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+.ready-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+.ready-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ready-item input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ok);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+}
+.faq-item summary {
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  color: var(--fg);
+}
+.faq-item p {
+  margin: 6px 0 0;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 32px;
+  padding: 20px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAVIGATION -->
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a class="brand-link" href="#pembuka">
+      <img class="brand-logo" src="https://ekinerja.biz.id/icon-192.png" alt="Logo e-Kinku" width="34" height="34">
+      <span>e-Kinku</span>
+      <span class="brand-tag">Tutorial Interaktif</span>
+    </a>
+    <div class="nav-actions">
+      <button type="button" class="btn sm" id="btnThemeToggle" title="Ganti Mode Terang / Gelap">🌙 Mode</button>
+      <a class="btn sm" id="navBtnDemo" href="https://ekinerja.biz.id/app?demo=1" target="_blank" rel="noopener">🧪 Coba Mode Demo</a>
+      <a class="btn primary sm" id="navBtnDaftar" href="https://ekinerja.biz.id/app?auth=daftar" target="_blank" rel="noopener">🚀 Daftar / Buka Aplikasi</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- DISCLAIMER PEMBUKA (WAJIB) -->
+  <div class="disclaimer-bar" role="note">
+    <div>
+      ℹ️ <strong>Penting diketahui:</strong> e-Kinku adalah alat bantu pendamping menyiapkan dokumen bukti dukung di Google Drive pribadi dan <strong>bukan aplikasi resmi BKN</strong>. Pengisian uraian SKP, jam kerja, dan rencana aksi tetap dilakukan di portal resmi <a href="https://kinerja.bkn.go.id" target="_blank" rel="noopener">kinerja.bkn.go.id</a>.
+    </div>
+    <a class="btn sm" id="topShortcutDemo" href="https://ekinerja.biz.id/app?demo=1" target="_blank" rel="noopener">Mau lihat dulu? Coba Mode Demo &rarr;</a>
+  </div>
+
+  <!-- BANNER LANJUTKAN PROGRES TERSIMPAN -->
+  <div class="resume-banner" id="resumeBanner" hidden>
+    <div>
+      👋 <strong>Selamat datang kembali!</strong> Terakhir kali Anda belajar sampai <strong id="resumeStepName">Langkah 1</strong> (<span id="resumeDoneCount">0</span> langkah sudah dikuasai).
+    </div>
+    <div style="display:flex;gap:6px">
+      <button type="button" class="btn ok sm" id="btnResumeGo">Lanjutkan Langkah Terakhir</button>
+      <button type="button" class="btn sm" id="btnResumeReset">Mulai dari Awal</button>
+    </div>
+  </div>
+
+  <!-- JALUR PROGRES LANGKAH (STEP RAIL) -->
+  <section class="rail-wrap" aria-label="Jalur Progres Belajar">
+    <div class="rail-top">
+      <span class="rail-progress-txt" id="railProgressTxt">Progres Belajar: 0 dari 9 bagian selesai</span>
+      <div style="display:flex;gap:6px;align-items:center">
+        <button type="button" class="btn sm" id="btnShareStepWa" title="Bagikan tautan langkah ini ke WhatsApp">📲 Bagikan Langkah Ini ke WA</button>
+      </div>
+    </div>
+    <div class="rail-bar-bg"><div class="rail-bar-fill" id="railBarFill"></div></div>
+    <div class="step-rail" id="stepRail" role="tablist"></div>
+  </section>
+
+  <!-- GRID UTAMA: PANDUAN (KIRI) + PANGGUNG HIDUP (KANAN) -->
+  <section class="tutorial-grid">
+
+    <!-- PANEL PANDUAN & KONTROL -->
+    <div class="guide-card">
+      <div class="step-kicker" id="stepKicker">PEMBUKA</div>
+      <h1 class="guide-title" id="stepTitle">Memuat panduan...</h1>
+      <p class="guide-summary" id="stepSummary"></p>
+
+      <!-- PILIHAN MODE: TONTON OTOMATIS vs LATIHAN SENDIRI -->
+      <div class="mode-switch" role="group" aria-label="Pilih mode belajar">
+        <button type="button" class="mode-btn active" id="btnModeWatch">🎬 Tonton Animasi</button>
+        <button type="button" class="mode-btn" id="btnModePractice">👆 Mode Latihan (Coba Klik)</button>
+      </div>
+
+      <!-- DAFTAR URUTAN TINDAKAN (BEATS) -->
+      <div class="beat-list" id="beatList"></div>
+
+      <!-- TIPS TAMBAHAN PER LANGKAH -->
+      <div class="guide-tip" id="stepTip"></div>
+
+      <!-- DAFTAR PERIKSA "SUDAH BISA" -->
+      <div class="mastery-row">
+        <label class="mastery-label" for="chkStepDone">
+          <input type="checkbox" id="chkStepDone">
+          <span>Saya sudah paham &amp; bisa langkah ini</span>
+        </label>
+        <span style="font-size:11px;font-weight:700;color:var(--ok)" id="lblSavedBadge">Tersimpan otomatis</span>
+      </div>
+
+      <!-- TOMBOL NAVIGASI LANGKAH -->
+      <div class="guide-nav">
+        <button type="button" class="btn" id="btnPrevStep">&larr; Sebelumnya</button>
+        <button type="button" class="btn" id="btnReplayStep" title="Putar ulang animasi langkah ini">🔄 Putar Ulang</button>
+        <button type="button" class="btn primary" id="btnNextStep">Berikutnya &rarr;</button>
+      </div>
+    </div>
+
+    <!-- PANGGUNG HIDUP DI TENGAH (PERSISTENT LIVING STAGE) -->
+    <div class="stage-shell" id="livingStage">
+      <div class="stage-topbar">
+        <span class="sim-badge">🛡️ Simulasi — bukan aplikasi asli (Aman untuk dicoba)</span>
+        <div class="stage-top-controls">
+          <button type="button" class="st-btn on" id="btnStagePlayPause">⏸️ Jeda Animasi</button>
+          <button type="button" class="st-btn on" id="btnStageVoice">🔊 Suara Pemandu: ON</button>
+        </div>
+      </div>
+
+      <div class="stage-viewport" id="stageViewport">
+        <div class="camera-rig" id="cameraRig">
+          <div class="device-frame" id="deviceFrame">
+            <div class="df-browser-bar">
+              <span style="font-weight:800;color:#2563eb">● ● ●</span>
+              <div class="df-url-pill" id="stageUrlBar">🔒 ekinerja.biz.id/app</div>
+              <span style="font-size:10px;font-weight:700;color:#16a34a">Simulasi</span>
+            </div>
+
+            <div class="df-workspace">
+              <!-- SISI KIRI / UTAMA: TIRUAN ANTARMUKA E-KINKU -->
+              <div class="ekinku-surface" id="ekinkuSurface">
+                <div class="ek-topbar">
+                  <div class="ek-brand">
+                    <img src="https://ekinerja.biz.id/icon-192.png" alt="Logo e-Kinku">
+                    <span>e-Kinku</span>
+                  </div>
+                  <span class="ek-chip" id="mockStatusChip">● Hubungkan Drive</span>
+                </div>
+
+                <!-- LAYER 0: PEMBUKA / LANDING & DEMO -->
+                <div class="ek-layer visible" id="layer0">
+                  <div class="ek-card" style="background:linear-gradient(135deg,#eff6ff,#ffffff)">
+                    <span style="font-size:10px;font-weight:800;color:#2563eb;background:#dbeafe;padding:2px 8px;border-radius:99px">PENDAMPING PORTAL BKN</span>
+                    <h4 style="font-size:15px;margin-top:6px">Bukti dukung e-Kinerja BKN beres dalam hitungan menit</h4>
+                    <p class="ek-muted">Foto kegiatan dari HP &rarr; otomatis rapi di Google Drive pribadi &rarr; salin judul &amp; link 1 klik ke portal BKN.</p>
+                    <div style="background:#f8fafc;border:1px dashed #cbd5e1;border-radius:8px;padding:8px;margin-bottom:8px;font-size:11px">
+                      <strong>Yang perlu disiapkan:</strong><br>
+                      ✅ 1. Alamat email <strong>Gmail aktif</strong><br>
+                      ✅ 2. HP Android/iPhone atau Laptop
+                    </div>
+                    <button type="button" class="ek-btn primary" id="hs0Daftar" data-hs="hs0Daftar">🚀 Daftar Akun Baru</button>
+                    <button type="button" class="ek-btn" id="hs0Demo" data-hs="hs0Demo">🧪 Coba Demo Gratis (Tanpa Daftar)</button>
+                  </div>
+                </div>
+
+                <!-- LAYER 1: LANGKAH 1 - DAFTAR AKUN (GMAIL / GOOGLE) -->
+                <div class="ek-layer" id="layer1">
+                  <div class="ek-card">
+                    <h4>Panel Harian e-Kinku</h4>
+                    <p class="ek-muted">Pilih cara pendaftaran yang paling nyaman bagi Anda:</p>
+                    <button type="button" class="ek-btn" id="hs1GoogleBtn" data-hs="hs1GoogleBtn" style="border-color:#93c5fd;background:#f8fafc">
+                      <strong style="color:#2563eb">G</strong> Lanjutkan dengan Akun Google (1-Klik)
+                    </button>
+                    <div style="text-align:center;font-size:10px;color:#64748b;margin:6px 0">&mdash; ATAU DAFTAR DENGAN KODE OTP EMAIL &mdash;</div>
+                    <label style="font-size:11px;font-weight:700;display:block;margin-bottom:3px">Alamat Gmail Anda</label>
+                    <div class="ek-input" id="hs1EmailInput" data-hs="hs1EmailInput">ketik email Gmail...</div>
+                    <button type="button" class="ek-btn primary" id="hs1SendOtpBtn" data-hs="hs1SendOtpBtn">📨 Kirim Kode Verifikasi</button>
+                  </div>
+                </div>
+
+                <!-- LAYER 2: LANGKAH 2 - KODE OTP (6 ANGKA DI EMAIL) -->
+                <div class="ek-layer" id="layer2">
+                  <div class="ek-card">
+                    <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:7px 9px;margin-bottom:8px;font-size:11px">
+                      📬 <strong>Kotak Masuk / Spam Gmail:</strong><br>
+                      Kode OTP e-Kinku Anda: <strong style="font-size:13px;color:#1d4ed8;letter-spacing:2px">482915</strong>
+                    </div>
+                    <h4>Verifikasi Kode OTP (6 Angka)</h4>
+                    <p class="ek-muted">Masukkan 6 angka yang dikirim ke email Anda (berlaku 10 menit, jangan bagikan ke siapa pun):</p>
+                    <div class="ek-input" id="hs2OtpInput" data-hs="hs2OtpInput" style="justify-content:center;font-size:16px;letter-spacing:4px;font-weight:800">______</div>
+                    <button type="button" class="ek-btn primary" id="hs2VerifyBtn" data-hs="hs2VerifyBtn">✅ Verifikasi &amp; Lanjutkan</button>
+                    <button type="button" class="ek-btn" id="hs2ResendBtn" data-hs="hs2ResendBtn" style="font-size:11px;min-height:30px">🔄 Belum masuk? Cek Spam / Kirim Ulang Kode (60s)</button>
+                  </div>
+                </div>
+
+                <!-- LAYER 3: LANGKAH 3 - AKTIVASI PAKET 6 BULAN -->
+                <div class="ek-layer" id="layer3">
+                  <div class="ek-card">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+                      <span class="ek-chip" id="mockPendingBadge">Menunggu Aktivasi</span>
+                      <span style="font-size:12px;font-weight:800;color:#2563eb"><s style="color:#94a3b8;font-size:10px">Rp50.000</s> <span id="mockHargaTxt">Rp25.000</span> / 6 bln</span>
+                    </div>
+                    <h4>Aktivasi Paket 6 Bulan</h4>
+                    <button type="button" class="ek-btn primary" id="hs3MidtransBtn" data-hs="hs3MidtransBtn">⚡ Cara 1: Bayar Otomatis (QRIS / Virtual Account)</button>
+                    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:7px;margin-bottom:6px;font-size:11px" id="hs3BankCard" data-hs="hs3BankCard">
+                      🏦 <strong>Cara 2: Transfer Rekening Admin</strong><br>
+                      <span>Salin nominal &amp; nomor rekening di aplikasi, lalu klik konfirmasi WA:</span>
+                    </div>
+                    <button type="button" class="ek-btn wa" id="hs3WaConfirmBtn" data-hs="hs3WaConfirmBtn">💬 Saya Sudah Bayar &mdash; Konfirmasi WA</button>
+                    <div style="display:flex;gap:5px;margin-top:4px">
+                      <div class="ek-input" id="hs3CodeInput" data-hs="hs3CodeInput" style="margin:0;flex:1;font-size:11px">Punya 6 angka Kode Aktivasi?</div>
+                      <button type="button" class="ek-btn ok" id="hs3UseCodeBtn" data-hs="hs3UseCodeBtn" style="width:auto;margin:0;padding:0 10px">Aktifkan</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- LAYER 4: LANGKAH 4 - SIAPKAN PENYIMPANAN DRIVE -->
+                <div class="ek-layer" id="layer4">
+                  <div class="ek-card">
+                    <h4>Siapkan Penyimpanan Google Drive</h4>
+                    <p class="ek-muted">Aplikasi <strong>hanya</strong> mengakses folder yang dibuatnya sendiri. File lama Anda di Drive tetap 100% aman &amp; tidak bisa dilihat aplikasi.</p>
+                    <button type="button" class="ek-btn primary" id="hs4SetupBtn" data-hs="hs4SetupBtn">🔗 1. Klik Siapkan Penyimpanan Saya</button>
+                    <div style="background:#eff6ff;border:1.5px solid #93c5fd;border-radius:8px;padding:8px;margin-bottom:8px;font-size:11px" id="hs4GoogleAllow" data-hs="hs4GoogleAllow">
+                      🔒 <strong>Jendela Izin Google:</strong><br>
+                      <span>&ldquo;Izinkan e-Kinku melihat &amp; mengelola file Google Drive yang dibuat aplikasi ini&rdquo; &rarr; <strong>Klik Lanjutkan (Continue)</strong></span>
+                    </div>
+                    <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:8px;font-size:11px" id="mockFolderTree">
+                      📁 <strong>e-kinerja</strong> (Otomatis terbentuk di Drive Anda)<br>
+                      &nbsp;&nbsp;└── 📁 <strong>2026</strong> &rsaquo; 📁 <strong>2026-11</strong> &rsaquo; 📄 Berkas Anda
+                    </div>
+                  </div>
+                </div>
+
+                <!-- LAYER 5: LANGKAH 5 - BUAT KATA SANDI -->
+                <div class="ek-layer" id="layer5">
+                  <div class="ek-card">
+                    <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:8px;padding:7px;margin-bottom:8px;font-size:11px;display:flex;justify-content:space-between;align-items:center">
+                      <span>🔑 <strong>Buat Kata Sandi:</strong> Agar masuk berikutnya tanpa OTP!</span>
+                      <button type="button" class="ek-btn primary" id="hs5OpenMenuBtn" data-hs="hs5OpenMenuBtn" style="width:auto;min-height:26px;padding:2px 8px;margin:0;font-size:10.5px">Buka Menu ☰</button>
+                    </div>
+                    <h4>Menu Samping &rsaquo; Buat / Ubah Kata Sandi</h4>
+                    <p class="ek-muted">Ketik kata sandi minimal 8 karakter yang mudah Anda ingat:</p>
+                    <div class="ek-input" id="hs5PassInput" data-hs="hs5PassInput">Ketik kata sandi baru (min. 8 karakter)...</div>
+                    <button type="button" class="ek-btn ok" id="hs5SavePassBtn" data-hs="hs5SavePassBtn">💾 Simpan Kata Sandi</button>
+                  </div>
+                </div>
+
+                <!-- LAYER 6: LANGKAH 6 - UNGGAH BUKTI PERTAMA -->
+                <div class="ek-layer" id="layer6">
+                  <div class="ek-card">
+                    <h4>1. Unggah Bukti Dukung (Foto / PDF)</h4>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+                      <button type="button" class="ek-btn primary" id="hs6FotoBtn" data-hs="hs6FotoBtn" style="margin:0">📷 Ambil Foto</button>
+                      <button type="button" class="ek-btn" id="hs6PdfBtn" data-hs="hs6PdfBtn" style="margin:0">📄 Pilih PDF/Galeri</button>
+                    </div>
+                    <div id="mockCompressBadge" style="display:none;background:#f0fdf4;border:1px solid #86efac;color:#15803d;padding:5px 8px;border-radius:6px;font-size:10.5px;font-weight:700;margin-bottom:8px">
+                      ✨ Foto otomatis dikompres: 3,4 MB &rarr; 210 KB (Tetap tajam &amp; hemat Drive!)
+                    </div>
+                    <h4>2. Judul Bukti Dukung yang Jelas</h4>
+                    <div style="font-size:10.5px;color:#b91c1c;margin-bottom:3px">❌ Hindari judul membingungkan: <code>IMG_20261106_0911.jpg</code></div>
+                    <div style="font-size:10.5px;color:#15803d;margin-bottom:5px">✅ Gunakan judul jelas: <code>Laporan Pelayanan Loket Hari Rabu 6 Nov</code></div>
+                    <div class="ek-input" id="hs6JudulInput" data-hs="hs6JudulInput">Klik untuk mengisi judul kegiatan yang jelas...</div>
+                    <button type="button" class="ek-btn primary" id="hs6SimpanBtn" data-hs="hs6SimpanBtn">☁️ Simpan ke Google Drive</button>
+                  </div>
+                </div>
+
+                <!-- LAYER 7: LANGKAH 7 - SALIN & TEMPEL KE BKN -->
+                <div class="ek-layer" id="layer7">
+                  <div class="ek-card">
+                    <h4>Daftar Dokumen Bukti Dukung (1)</h4>
+                    <p class="ek-muted">Berkas sudah otomatis berizin publik (&ldquo;Siapa saja yang memiliki link dapat melihat&rdquo;):</p>
+                    <div style="background:#f8fafc;border:1.5px solid #cbd5e1;border-radius:10px;padding:9px">
+                      <div style="font-weight:800;font-size:12px;margin-bottom:2px">📄 Laporan Pelayanan Loket Hari Rabu 6 Nov</div>
+                      <div style="font-size:10.5px;color:#64748b;margin-bottom:8px">6 Nov 2026 &bull; 210 KB &bull; Tersimpan di Google Drive</div>
+                      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+                        <button type="button" class="ek-btn" id="hs7CopyJudul" data-hs="hs7CopyJudul" style="margin:0">📋 1. Salin Judul</button>
+                        <button type="button" class="ek-btn primary" id="hs7CopyLink" data-hs="hs7CopyLink" style="margin:0">🔗 2. Salin Link</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- LAYER 8: LANGKAH 8 - TIPS HARIAN (DUPLIKAT & CARI) -->
+                <div class="ek-layer" id="layer8">
+                  <div class="ek-card">
+                    <h4>Tips Harian: Cari Cepat, Duplikat &amp; Pindah HP</h4>
+                    <div class="ek-input" id="hs8SearchInput" data-hs="hs8SearchInput">🔍 Cari dokumen bulan ini atau bulan lalu...</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+                      <button type="button" class="ek-btn" id="hs8DupBtn" data-hs="hs8DupBtn" style="margin:0">🔁 Duplikat Kegiatan</button>
+                      <button type="button" class="ek-btn" id="hs8CalBtn" data-hs="hs8CalBtn" style="margin:0">📅 Buka Kalender</button>
+                    </div>
+                    <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px;font-size:11px">
+                      💻 <strong>Masuk dari Laptop Kantor / HP Baru:</strong><br>
+                      Cukup login dengan Google atau kata sandi &mdash; semua dokumen Drive Anda otomatis tampil tanpa perlu atur ulang!
+                    </div>
+                  </div>
+                </div>
+
+                <!-- LAYER 9: PENUTUP - SIAP PAKAI -->
+                <div class="ek-layer" id="layer9">
+                  <div class="ek-card" style="text-align:center;padding:18px 12px">
+                    <div style="font-size:34px;margin-bottom:6px">🎉</div>
+                    <h4 style="font-size:15px">Selamat! Anda Sudah Siap Memakai e-Kinku</h4>
+                    <p class="ek-muted">Semua langkah dari pendaftaran hingga menempel link ke portal e-Kinerja BKN sudah Anda pelajari.</p>
+                    <a class="ek-btn primary" id="hs9GoApp" href="https://ekinerja.biz.id/app?auth=daftar" target="_blank" rel="noopener" style="text-decoration:none">🚀 Buka Aplikasi e-Kinku Sekarang</a>
+                    <a class="ek-btn" id="hs9GoDemo" href="https://ekinerja.biz.id/app?demo=1" target="_blank" rel="noopener" style="text-decoration:none">🧪 Coba Mode Demo Gratis</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- SISI KANAN (KHUSUS LANGKAH 7 & 8 SPLIT-VIEW): TIRUAN PORTAL BKN -->
+              <div class="bkn-surface" id="bknSurface">
+                <div class="bkn-head">
+                  <span>🏛️ Portal e-Kinerja BKN (Simulasi)</span>
+                  <span style="font-size:10px;color:#93c5fd">kinerja.bkn.go.id</span>
+                </div>
+                <div class="ek-card">
+                  <h4>Form Tambah Bukti Dukung SKP</h4>
+                  <p class="ek-muted">Tempel (Paste) hasil salinan dari e-Kinku ke kolom di bawah ini:</p>
+                  <label style="font-size:11px;font-weight:700;display:block;margin-bottom:3px">Nama Bukti Dukung:</label>
+                  <div class="ek-input" id="hs7PasteJudul" data-hs="hs7PasteJudul">(Klik untuk Tempel Judul di sini)</div>
+                  <label style="font-size:11px;font-weight:700;display:block;margin-bottom:3px">Link Google Drive Bukti Dukung:</label>
+                  <div class="ek-input" id="hs7PasteLink" data-hs="hs7PasteLink">(Klik untuk Tempel Link Drive di sini)</div>
+                  <div id="mockBknSuccess" style="display:none;background:#f0fdf4;border:1px solid #86efac;color:#15803d;padding:7px;border-radius:8px;font-size:11px;font-weight:700;text-align:center">
+                    ✅ Berhasil ditempel! Tinggal klik OK di portal BKN.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KURSOR ANIMASI DI ATAS PANGGUNG -->
+            <div class="stage-cursor" id="stageCursor" aria-hidden="true">
+              <div class="cursor-ripple"></div>
+              <svg viewBox="0 0 24 24">
+                <path d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87c.45 0 .67-.53.35-.85L6.35 2.86a.5.5 0 0 0-.85.35z" fill="#2563eb" stroke="#ffffff" stroke-width="2"/>
+              </svg>
+              <span class="cursor-pill" id="cursorPill">Klik di sini</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- BAR TEKS NARASI & UMPAN BALIK LATIHAN -->
+      <div class="stage-caption-bar" aria-live="polite">
+        <div class="stage-caption-txt" id="stageCaptionTxt">
+          Memuat simulasi interaktif...
+        </div>
+        <div class="practice-feedback" id="practiceFeedback">Mode Tonton Aktif</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BAGIAN PENUTUP: DAFTAR PERIKSA "KAMU SUDAH SIAP" + FAQ RINGKAS + WA CS -->
+  <section class="closing-sec" id="bagian-penutup">
+    <div class="closing-card">
+      <h2>✅ Daftar Periksa: &ldquo;Kamu Sudah Siap!&rdquo;</h2>
+      <p style="color:var(--muted);font-size:13px;margin:0 0 10px">
+        Centang empat hal di bawah ini saat Anda sudah mencobanya. Daftar ini tersimpan di HP/laptop Anda:
+      </p>
+      <div class="ready-list" id="finalChecklist">
+        <label class="ready-item">
+          <input type="checkbox" data-ready-chk="akun_aktif">
+          <span>1. Akun e-Kinku sudah terdaftar &amp; aktif</span>
+        </label>
+        <label class="ready-item">
+          <input type="checkbox" data-ready-chk="drive_terhubung">
+          <span>2. Penyimpanan Google Drive pribadi sudah terhubung (status hijau <strong>&bull; Siap</strong>)</span>
+        </label>
+        <label class="ready-item">
+          <input type="checkbox" data-ready-chk="bukti_terunggah">
+          <span>3. Satu foto atau PDF bukti kegiatan berhasil diunggah</span>
+        </label>
+        <label class="ready-item">
+          <input type="checkbox" data-ready-chk="link_ditempel">
+          <span>4. Satu Judul &amp; Link berhasil disalin lalu ditempel ke portal BKN</span>
+        </label>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">
+        <a class="btn primary" id="botBtnDaftar" href="https://ekinerja.biz.id/app?auth=daftar" target="_blank" rel="noopener">🚀 Daftar / Masuk e-Kinku</a>
+        <a class="btn" id="botBtnDemo" href="https://ekinerja.biz.id/app?demo=1" target="_blank" rel="noopener">🧪 Coba Mode Demo</a>
+        <a class="btn wa" id="botBtnWa" href="https://wa.me/6287865271666" target="_blank" rel="noopener">💬 Bantuan WhatsApp CS: 0878-6527-1666</a>
+      </div>
+    </div>
+
+    <div class="closing-card">
+      <h2>❓ Tanya Jawab Ringkas (FAQ Kendala Umum)</h2>
+      <details class="faq-item" open>
+        <summary>1. Kode OTP (6 angka) belum masuk ke email saya?</summary>
+        <p>Buka aplikasi Gmail Anda, lalu periksa folder <strong>Spam</strong> atau <strong>Promosi</strong>. Pastikan penulisan alamat `@gmail.com` sudah benar. Setelah 60 detik, Anda bisa menekan tombol <strong>Kirim Ulang Kode</strong>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>2. Bagaimana kalau saya lupa kata sandi?</summary>
+        <p>Pada halaman masuk, tekan tautan <strong>Lupa Password?</strong>, masukkan alamat Gmail Anda, lalu klik <strong>Kirim OTP</strong>. Masukkan 6 angka dari email untuk membuat kata sandi baru.</p>
+      </details>
+      <details class="faq-item">
+        <summary>3. Bagaimana kalau saya ganti HP atau membuka dari laptop kantor?</summary>
+        <p>Sangat mudah! Buka <strong>ekinerja.biz.id/app</strong> di HP baru atau laptop kantor, lalu masuk dengan akun Google atau email &amp; kata sandi Anda. Seluruh berkas dan folder Google Drive Anda otomatis tersambung kembali.</p>
+      </details>
+      <details class="faq-item">
+        <summary>4. Berkas kegiatan bulan lalu tidak ketemu, di mana mencarinya?</summary>
+        <p>Ketik kata kunci judul di kotak <strong>Cari dokumen...</strong>, atau tekan tombol <strong>Menu (☰)</strong> di kanan atas lalu geser bulan pada <strong>Kalender Kegiatan</strong> untuk melihat seluruh arsip bulan sebelumnya.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER PENUTUP (WAJIB) -->
+  <footer class="site-footer">
+    <p style="max-width:780px;margin:0 auto 10px">
+      🔒 <strong>Pernyataan Resmi:</strong> e-Kinku adalah aplikasi bantu independen untuk pengarsipan bukti dukung di Google Drive pribadi pengguna dan <strong>bukan aplikasi resmi Badan Kepegawaian Negara (BKN)</strong>. Pengisian uraian kegiatan, jam kerja, serta rencana aksi SKP tetap dilakukan di portal resmi <a href="https://kinerja.bkn.go.id" target="_blank" rel="noopener">kinerja.bkn.go.id</a>.
+    </p>
+    <p>
+      &copy; 2026 <a href="https://ekinerja.biz.id">e-Kinku (ekinerja.biz.id)</a> &bull; Butuh bantuan langsung? Hubungi <a id="footWaLink" href="https://wa.me/6287865271666" target="_blank" rel="noopener">WhatsApp CS: 0878-6527-1666</a>
+    </p>
+  </footer>
+
+</main>
+
+<script>
+/* ==========================================================================
+   KONSTANTA KONFIGURASI TERPUSAT (CONFIG)
+   Ubah harga promo, nomor WA CS, atau tautan di satu tempat ini saja.
+   ========================================================================== */
+var CONFIG = {
+  APP_NAME: 'e-Kinku',
+  MAIN_SITE_URL: 'https://ekinerja.biz.id',
+  APP_LOGIN_URL: 'https://ekinerja.biz.id/app',
+  SIGNUP_URL: 'https://ekinerja.biz.id/app?auth=daftar',
+  DEMO_URL: 'https://ekinerja.biz.id/app?demo=1',
+  TUTORIAL_SITE_URL: 'https://tutorial.ekinerja.biz.id',
+  PROMO_PRICE: 'Rp25.000',
+  NORMAL_PRICE: 'Rp50.000',
+  PACKAGE_DURATION: '6 bulan',
+  WA_CS_DISPLAY: '0878-6527-1666',
+  WA_CS_NUMBER: '6287865271666',
+  STORAGE_KEY: 'ekinku_tutorial_interaktif_v1'
+};
+
+(function () {
+  'use strict';
+
+  function $(id) { return document.getElementById(id); }
+
+  /* Terapkan nilai CONFIG ke seluruh tautan & teks halaman */
+  function applyConfigToDOM() {
+    var waUrl = 'https://wa.me/' + CONFIG.WA_CS_NUMBER + '?text=' + encodeURIComponent('Halo CS ' + CONFIG.APP_NAME + ', saya sedang mempelajari tutorial dan ingin bertanya.');
+    if ($('mockHargaTxt')) $('mockHargaTxt').textContent = CONFIG.PROMO_PRICE;
+    if ($('navBtnDemo')) $('navBtnDemo').href = CONFIG.DEMO_URL;
+    if ($('topShortcutDemo')) $('topShortcutDemo').href = CONFIG.DEMO_URL;
+    if ($('botBtnDemo')) $('botBtnDemo').href = CONFIG.DEMO_URL;
+    if ($('hs9GoDemo')) $('hs9GoDemo').href = CONFIG.DEMO_URL;
+    if ($('navBtnDaftar')) $('navBtnDaftar').href = CONFIG.SIGNUP_URL;
+    if ($('botBtnDaftar')) $('botBtnDaftar').href = CONFIG.SIGNUP_URL;
+    if ($('hs9GoApp')) $('hs9GoApp').href = CONFIG.SIGNUP_URL;
+    if ($('botBtnWa')) {
+      $('botBtnWa').href = waUrl;
+      $('botBtnWa').textContent = '💬 Bantuan WhatsApp CS: ' + CONFIG.WA_CS_DISPLAY;
+    }
+    if ($('footWaLink')) {
+      $('footWaLink').href = waUrl;
+      $('footWaLink').textContent = 'WhatsApp CS: ' + CONFIG.WA_CS_DISPLAY;
+    }
+  }
+
+  /* ==========================================================================
+     DATA 10 BAGIAN TUTORIAL (PEMBUKA + LANGKAH 1..8 + PENUTUP)
+     Disesuaikan 100% dengan alur live https://ekinerja.biz.id (v3.1.3)
+     ========================================================================== */
+  var STEPS = [
+    {
+      slug: 'pembuka',
+      shortLabel: 'Pembuka',
+      kicker: 'PEMBUKA & PERSIAPAN',
+      title: 'Kenalan Singkat dengan e-Kinku',
+      summary: 'e-Kinku membantu ASN & PPPK menyimpan foto/PDF kegiatan harian otomatis ke Google Drive pribadi, lalu menyalin Judul dan Link cukup 1 klik untuk ditempel ke portal e-Kinerja BKN.',
+      tip: '💡 Yang perlu Anda siapkan hanya 2 hal: alamat email Gmail aktif dan HP atau laptop. Mau coba dulu tanpa daftar? Klik tombol "Coba Mode Demo" di atas.',
+      layerId: 'layer0',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id — Halaman Utama',
+      beats: [
+        {
+          label: 'Pahami fungsi e-Kinku sebagai pendamping portal BKN',
+          voice: 'Selamat datang di tutorial interaktif e-Kinku. Aplikasi ini membantu Anda menyimpan foto dan P D F bukti kegiatan ke Google Drive pribadi, lalu menyalin judul dan link satu klik ke portal B K N.',
+          caption: '<strong>Apa itu e-Kinku?</strong> Panel pendamping untuk merapikan foto/PDF bukti dukung di Google Drive pribadi Anda.',
+          targetId: 'hs0Daftar',
+          cursorText: 'Siapkan Gmail & HP',
+          cam: { x: 0, y: 10, scale: 1.03 }
+        },
+        {
+          label: 'Mau lihat dulu tanpa daftar? Klik "Coba Demo Gratis"',
+          voice: 'Jika Anda ingin mencoba lebih dulu tanpa mendaftar, Anda bisa menekan tombol Coba Demo Gratis.',
+          caption: 'Ingin mencoba dulu tanpa membuat akun? Tekan <strong>Coba Demo Gratis</strong>.',
+          targetId: 'hs0Demo',
+          cursorText: 'Coba Demo Gratis',
+          cam: { x: 0, y: -25, scale: 1.12 },
+          click: true
+        },
+        {
+          label: 'Mulai membuat akun dengan klik "Daftar Akun Baru"',
+          voice: 'Jika sudah siap memakai penyimpanan Google Drive pribadi Anda, tekan tombol Daftar Akun Baru.',
+          caption: 'Siap memulai? Tekan tombol biru <strong>Daftar Akun Baru</strong>.',
+          targetId: 'hs0Daftar',
+          cursorText: 'Klik Daftar Akun Baru',
+          cam: { x: 0, y: -15, scale: 1.14 },
+          click: true
+        }
+      ],
+      practiceOrder: ['hs0Demo', 'hs0Daftar']
+    },
+    {
+      slug: 'langkah-1',
+      shortLabel: '1. Daftar Akun',
+      kicker: 'LANGKAH 1 DARI 8',
+      title: 'Daftar Akun dengan Gmail',
+      summary: 'Buka ekinerja.biz.id lalu pilih Daftar Akun Baru. Di aplikasi live tersedia dua cara mudah: masuk 1 klik lewat tombol Google, atau mengetik alamat Gmail untuk menerima kode OTP.',
+      tip: '💡 Tips: Pastikan alamat Gmail yang Anda ketik aktif dan bisa dibuka di HP Anda.',
+      layerId: 'layer1',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app?auth=daftar',
+      beats: [
+        {
+          label: 'Opsi tercepat: Klik "Lanjutkan dengan Akun Google"',
+          voice: 'Langkah pertama: Mendaftar akun. Cara paling cepat adalah menekan tombol Lanjutkan dengan Akun Google di bagian atas.',
+          caption: '<strong>Jalur Cepat 1-Klik:</strong> Tekan tombol <strong>Lanjutkan dengan Akun Google</strong>.',
+          targetId: 'hs1GoogleBtn',
+          cursorText: 'Masuk Cepat Google',
+          cam: { x: 0, y: 20, scale: 1.12 },
+          click: true
+        },
+        {
+          label: 'Atau ketik alamat Gmail Anda di kolom pendaftaran',
+          voice: 'Atau jika mendaftar manual, ketik alamat Gmail aktif Anda pada kolom Alamat Gmail.',
+          caption: '<strong>Jalur Kode Email:</strong> Ketik alamat Gmail Anda, misalnya <code>budi.asn@gmail.com</code>.',
+          targetId: 'hs1EmailInput',
+          cursorText: 'Isi Alamat Gmail',
+          cam: { x: 0, y: -10, scale: 1.15 },
+          click: true,
+          onBeat: function () {
+            if ($('hs1EmailInput')) {
+              $('hs1EmailInput').textContent = 'budi.asn@gmail.com';
+              $('hs1EmailInput').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Tekan tombol "Kirim Kode Verifikasi"',
+          voice: 'Lalu tekan tombol biru Kirim Kode Verifikasi untuk mengirimkan enam angka kode ke email Anda.',
+          caption: 'Tekan tombol <strong>Kirim Kode Verifikasi</strong> untuk mengirim kode 6 angka ke Gmail Anda.',
+          targetId: 'hs1SendOtpBtn',
+          cursorText: 'Klik Kirim Kode',
+          cam: { x: 0, y: -35, scale: 1.15 },
+          click: true
+        }
+      ],
+      practiceOrder: ['hs1EmailInput', 'hs1SendOtpBtn']
+    },
+    {
+      slug: 'langkah-2',
+      shortLabel: '2. Kode OTP',
+      kicker: 'LANGKAH 2 DARI 8',
+      title: 'Masukkan Kode OTP (Kode 6 Angka di Email)',
+      summary: 'Buka kotak masuk aplikasi Gmail Anda dan temukan email kode OTP (kode 6 angka yang dikirim ke email). Jika belum terlihat di kotak masuk utama, periksa juga folder Spam.',
+      tip: '🔒 Penting: Kode OTP berlaku 10 menit dan dapat dikirim ulang setelah 60 detik. Jangan pernah membagikan kode 6 angka ini kepada siapa pun.',
+      layerId: 'layer2',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app — Verifikasi OTP',
+      beats: [
+        {
+          label: 'Cek kotak masuk atau folder Spam di Gmail Anda',
+          voice: 'Langkah kedua: Buka aplikasi Gmail Anda. Lihat enam angka kode O T P yang masuk. Jika belum ada di kotak masuk, periksa folder Spam.',
+          caption: 'Buka Gmail Anda (cek juga folder <strong>Spam</strong>) untuk melihat <strong>kode 6 angka (OTP)</strong>.',
+          targetId: 'hs2OtpInput',
+          cursorText: 'Ketik 6 Angka OTP',
+          cam: { x: 0, y: 15, scale: 1.12 },
+          click: true,
+          onBeat: function () {
+            if ($('hs2OtpInput')) {
+              $('hs2OtpInput').textContent = '482915';
+              $('hs2OtpInput').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Ketik 6 angka kode OTP lalu tekan "Verifikasi & Lanjutkan"',
+          voice: 'Ketik keenam angka tersebut ke kotak verifikasi, lalu tekan tombol Verifikasi dan Lanjutkan.',
+          caption: 'Masukkan 6 angka <code>482915</code> lalu tekan <strong>Verifikasi &amp; Lanjutkan</strong>.',
+          targetId: 'hs2VerifyBtn',
+          cursorText: 'Klik Verifikasi',
+          cam: { x: 0, y: -15, scale: 1.15 },
+          click: true
+        },
+        {
+          label: 'Gunakan "Kirim Ulang Kode" bila lewat 60 detik belum masuk',
+          voice: 'Jika kode belum masuk setelah enam puluh detik, Anda bisa menekan tombol Kirim Ulang Kode di bagian bawah.',
+          caption: 'Belum masuk setelah 60 detik? Tekan tombol <strong>Kirim Ulang Kode</strong>. Ingat: jangan bagikan kode ini ke siapa pun.',
+          targetId: 'hs2ResendBtn',
+          cursorText: 'Kirim Ulang bila perlu',
+          cam: { x: 0, y: -40, scale: 1.1 }
+        }
+      ],
+      practiceOrder: ['hs2OtpInput', 'hs2VerifyBtn']
+    },
+    {
+      slug: 'langkah-3',
+      shortLabel: '3. Aktivasi Paket',
+      kicker: 'LANGKAH 3 DARI 8',
+      title: 'Aktivasi Paket Layanan (' + CONFIG.PROMO_PRICE + ' / ' + CONFIG.PACKAGE_DURATION + ')',
+      summary: 'Pilih cara pembayaran yang paling mudah: Bayar Otomatis lewat QRIS/Virtual Account (langsung aktif detik itu juga), Transfer ke rekening admin lalu konfirmasi WhatsApp, atau masukkan 6 angka Kode Aktivasi.',
+      tip: '💡 Dengan pembayaran QRIS / Virtual Account, akun Anda langsung aktif otomatis tanpa perlu menunggu pemeriksaan manual.',
+      layerId: 'layer3',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app — Aktivasi Akun',
+      beats: [
+        {
+          label: 'Cara tercepat: Klik "Bayar Otomatis (QRIS / Virtual Account)"',
+          voice: 'Langkah ketiga: Aktivasi paket enam bulan seharga dua puluh lima ribu rupiah. Anda bisa menekan tombol Bayar Otomatis untuk membayar lewat Q R I S atau Virtual Account.',
+          caption: '<strong>Cara 1 (Instan):</strong> Tekan <strong>Bayar Otomatis</strong> untuk scan QRIS / Virtual Account.',
+          targetId: 'hs3MidtransBtn',
+          cursorText: 'Pilih Bayar Otomatis',
+          cam: { x: 0, y: 15, scale: 1.12 },
+          click: true
+        },
+        {
+          label: 'Atau transfer ke rekening admin & klik "Konfirmasi WA"',
+          voice: 'Atau jika transfer manual ke rekening admin yang tampil di layar, tekan tombol hijau Saya Sudah Bayar Konfirmasi WhatsApp.',
+          caption: '<strong>Cara 2 (Transfer Bank):</strong> Transfer ke rekening di layar lalu tekan tombol hijau <strong>Konfirmasi WA</strong>.',
+          targetId: 'hs3WaConfirmBtn',
+          cursorText: 'Konfirmasi via WA',
+          cam: { x: 0, y: -15, scale: 1.14 },
+          click: true
+        },
+        {
+          label: 'Atau masukkan 6 angka Kode Aktivasi dari Admin hingga akun Aktif',
+          voice: 'Jika Anda mendapat enam angka kode aktivasi dari admin, ketik kodenya lalu tekan Aktifkan. Status akun Anda kini menjadi Aktif!',
+          caption: '<strong>Cara 3 (Kode Aktivasi):</strong> Masukkan 6 angka kode dari admin lalu klik <strong>Aktifkan</strong>.',
+          targetId: 'hs3UseCodeBtn',
+          cursorText: 'Klik Aktifkan',
+          cam: { x: 0, y: -40, scale: 1.14 },
+          click: true,
+          onBeat: function () {
+            if ($('hs3CodeInput')) {
+              $('hs3CodeInput').textContent = '884920';
+              $('hs3CodeInput').classList.add('filled');
+            }
+            if ($('mockPendingBadge')) {
+              $('mockPendingBadge').textContent = '✓ Akun Aktif 6 Bulan';
+              $('mockPendingBadge').className = 'ek-chip ok';
+            }
+          }
+        }
+      ],
+      practiceOrder: ['hs3MidtransBtn', 'hs3WaConfirmBtn', 'hs3UseCodeBtn']
+    },
+    {
+      slug: 'langkah-4',
+      shortLabel: '4. Penyimpanan Drive',
+      kicker: 'LANGKAH 4 DARI 8',
+      title: 'Siapkan Penyimpanan Google Drive Pribadi',
+      summary: 'Berikan izin kepada aplikasi untuk membuat folder di Google Drive Anda. Tenang: aplikasi HANYA bisa mengakses berkas yang dibuat oleh e-Kinku sendiri, sehingga foto dan dokumen pribadi Anda lainnya tetap 100% aman.',
+      tip: '✅ Setelah terhubung, folder e-kinerja › Tahun › Bulan otomatis terbentuk di Google Drive Anda dan indikator atas berubah hijau "• Siap".',
+      layerId: 'layer4',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app — Hubungkan Google Drive',
+      beats: [
+        {
+          label: 'Tekan tombol "Siapkan Penyimpanan Saya"',
+          voice: 'Langkah keempat: Menyiapkan penyimpanan Google Drive. Tekan tombol biru Siapkan Penyimpanan Saya.',
+          caption: 'Tekan tombol <strong>Siapkan Penyimpanan Saya</strong> untuk menghubungkan Google Drive pribadi Anda.',
+          targetId: 'hs4SetupBtn',
+          cursorText: '1. Klik Siapkan Drive',
+          cam: { x: 0, y: 20, scale: 1.14 },
+          click: true
+        },
+        {
+          label: 'Pilih akun Google & tekan "Lanjutkan (Continue)" pada izin Google',
+          voice: 'Pada jendela izin Google, tekan Lanjutkan. Aplikasi hanya mengakses file yang dibuat aplikasi ini sendiri, bukan isi Drive Anda yang lain.',
+          caption: 'Pada jendela Google, tekan <strong>Lanjutkan (Continue)</strong>. File pribadi Anda lainnya tetap aman.',
+          targetId: 'hs4GoogleAllow',
+          cursorText: '2. Klik Lanjutkan',
+          cam: { x: 0, y: -5, scale: 1.14 },
+          click: true
+        },
+        {
+          label: 'Folder e-kinerja (Tahun › Bulan) otomatis terbentuk & status "• Siap"',
+          voice: 'Berhasil! Folder e-kinerja beserta sub-folder Tahun dan Bulan otomatis terbentuk di Drive Anda, dan penanda di pojok kanan atas berubah hijau: Siap.',
+          caption: 'Folder <code>e-kinerja &rsaquo; Tahun &rsaquo; Bulan</code> otomatis terbentuk! Status kanan atas berubah hijau <strong>&bull; Siap</strong>.',
+          targetId: 'mockStatusChip',
+          cursorText: 'Status Hijau: Siap!',
+          cam: { x: 0, y: 40, scale: 1.08 },
+          onBeat: function () {
+            if ($('mockStatusChip')) {
+              $('mockStatusChip').textContent = '● Siap';
+              $('mockStatusChip').className = 'ek-chip ok';
+            }
+          }
+        }
+      ],
+      practiceOrder: ['hs4SetupBtn', 'hs4GoogleAllow']
+    },
+    {
+      slug: 'langkah-5',
+      shortLabel: '5. Buat Kata Sandi',
+      kicker: 'LANGKAH 5 DARI 8',
+      title: 'Buat Kata Sandi untuk Masuk Berikutnya',
+      summary: 'Supaya besok-besok Anda bisa langsung masuk tanpa perlu membuka email untuk melihat kode OTP lagi, buatlah kata sandi akun melalui tombol pengingat atau dari menu samping (☰).',
+      tip: '🔑 Ingat: Kode OTP (6 angka email) hanya diperlukan saat pertama kali mendaftar atau ketika Anda lupa kata sandi.',
+      layerId: 'layer5',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app — Menu Kata Sandi',
+      beats: [
+        {
+          label: 'Tekan "Buat Sekarang" atau buka Menu Samping (☰) › Ubah Password',
+          voice: 'Langkah kelima: Membuat kata sandi akun. Tekan tombol Buka Menu di kanan atas lalu pilih Buat atau Ubah Kata Sandi.',
+          caption: 'Buka <strong>Menu (☰)</strong> atau klik pengingat <strong>Buat Sekarang</strong>.',
+          targetId: 'hs5OpenMenuBtn',
+          cursorText: '1. Buka Menu Sandi',
+          cam: { x: 0, y: 25, scale: 1.14 },
+          click: true
+        },
+        {
+          label: 'Ketik kata sandi baru minimal 8 karakter',
+          voice: 'Ketik kata sandi pilihan Anda minimal delapan karakter yang mudah Anda ingat.',
+          caption: 'Ketik kata sandi minimal 8 karakter pada kolom <strong>Password Baru</strong>.',
+          targetId: 'hs5PassInput',
+          cursorText: '2. Isi Kata Sandi',
+          cam: { x: 0, y: -10, scale: 1.15 },
+          click: true,
+          onBeat: function () {
+            if ($('hs5PassInput')) {
+              $('hs5PassInput').textContent = '•••••••••• (10 karakter)';
+              $('hs5PassInput').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Tekan "Simpan Kata Sandi"',
+          voice: 'Tekan tombol hijau Simpan Kata Sandi. Mulai sekarang, Anda bisa masuk kapan saja tanpa perlu menunggu kode O T P.',
+          caption: 'Tekan <strong>Simpan Kata Sandi</strong>. Masuk berikutnya cukup pakai kata sandi ini!',
+          targetId: 'hs5SavePassBtn',
+          cursorText: '3. Klik Simpan',
+          cam: { x: 0, y: -35, scale: 1.15 },
+          click: true
+        }
+      ],
+      practiceOrder: ['hs5OpenMenuBtn', 'hs5PassInput', 'hs5SavePassBtn']
+    },
+    {
+      slug: 'langkah-6',
+      shortLabel: '6. Unggah Bukti',
+      kicker: 'LANGKAH 6 DARI 8',
+      title: 'Unggah Bukti Pertama & Beri Judul yang Jelas',
+      summary: 'Ambil foto kegiatan langsung dari kamera HP atau pilih berkas PDF. Foto berukuran besar otomatis dikompres oleh e-Kinku agar hemat ruang Google Drive. Berikan judul kegiatan yang spesifik agar mudah dicari saat evaluasi SKP.',
+      tip: '✅ Contoh judul yang baik: "Notulen Rapat Evaluasi Kinerja 6 Nov". Hindari membiarkan nama bawaan kamera seperti "IMG_20261106.jpg" atau " WhatsApp Image...".',
+      layerId: 'layer6',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id/app — Unggah Bukti Dukung',
+      beats: [
+        {
+          label: 'Tekan tombol "Ambil Foto" atau "Pilih PDF/Galeri"',
+          voice: 'Langkah keenam: Mengunggah bukti kegiatan pertama Anda. Tekan tombol Ambil Foto atau Pilih P D F dari HP Anda.',
+          caption: 'Tekan tombol <strong>📷 Ambil Foto</strong> atau <strong>📄 Pilih PDF/Galeri</strong>.',
+          targetId: 'hs6FotoBtn',
+          cursorText: '1. Pilih Foto / PDF',
+          cam: { x: -15, y: 25, scale: 1.14 },
+          click: true,
+          onBeat: function () {
+            if ($('mockCompressBadge')) $('mockCompressBadge').style.display = 'block';
+          }
+        },
+        {
+          label: 'Tulis judul bukti dukung yang jelas (bukan IMG_001.jpg)',
+          voice: 'Foto otomatis dikompres agar hemat kuota Drive. Selanjutnya, ubah judulnya menjadi nama kegiatan yang jelas, misalnya Laporan Pelayanan Loket Hari Rabu.',
+          caption: 'Isi <strong>Judul bukti dukung</strong> yang jelas &amp; mudah dikenali atasan.',
+          targetId: 'hs6JudulInput',
+          cursorText: '2. Ketik Judul Jelas',
+          cam: { x: 0, y: -15, scale: 1.15 },
+          click: true,
+          onBeat: function () {
+            if ($('hs6JudulInput')) {
+              $('hs6JudulInput').textContent = 'Laporan Pelayanan Loket Hari Rabu 6 Nov';
+              $('hs6JudulInput').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Tekan tombol "Simpan ke Google Drive"',
+          voice: 'Terakhir, tekan tombol biru Simpan. Berkas langsung masuk ke folder bulan berjalan di Google Drive Anda!',
+          caption: 'Tekan tombol <strong>Simpan</strong> &mdash; berkas tersimpan rapi di sub-folder bulan berjalan.',
+          targetId: 'hs6SimpanBtn',
+          cursorText: '3. Klik Simpan',
+          cam: { x: 0, y: -40, scale: 1.15 },
+          click: true
+        }
+      ],
+      practiceOrder: ['hs6FotoBtn', 'hs6JudulInput', 'hs6SimpanBtn']
+    },
+    {
+      slug: 'langkah-7',
+      shortLabel: '7. Salin & Tempel BKN',
+      kicker: 'LANGKAH 7 DARI 8',
+      title: 'Salin 1-Klik & Tempel ke Portal e-Kinerja BKN',
+      summary: 'Inilah kemudahan utama e-Kinku! Anda tidak perlu lagi membuka Google Drive atau mengatur izin berbagi link. Cukup tekan tombol "Salin Judul" dan "Salin Link", lalu tempelkan langsung ke kolom Bukti Dukung di portal e-Kinerja BKN.',
+      tip: '💡 Perhatikan panggung di samping: kini menampilkan dua layar berdampingan (Panel e-Kinku di kiri & simulasi Portal e-Kinerja BKN di kanan).',
+      layerId: 'layer7',
+      splitDesktop: true,
+      urlText: '🖥️ Layar Berdampingan: e-Kinku (Kiri) ⇄ Portal e-Kinerja BKN (Kanan)',
+      beats: [
+        {
+          label: 'Di e-Kinku (kiri), tekan tombol "📋 1. Salin Judul"',
+          voice: 'Langkah ketujuh: Menyalin dan menempel ke portal B K N. Pada daftar dokumen di sebelah kiri, tekan tombol Salin Judul satu kali.',
+          caption: '<strong>Beat 1/4:</strong> Tekan tombol <strong>📋 Salin Judul</strong> pada daftar dokumen e-Kinku.',
+          targetId: 'hs7CopyJudul',
+          cursorText: '1. Klik Salin Judul',
+          cam: { x: 80, y: 0, scale: 1.08 },
+          click: true,
+          onBeat: function () {
+            if ($('hs7CopyJudul')) {
+              $('hs7CopyJudul').textContent = '✓ Judul Tersalin';
+              $('hs7CopyJudul').classList.add('ok');
+            }
+          }
+        },
+        {
+          label: 'Pindah ke portal BKN (kanan), tempel ke kolom "Nama Bukti Dukung"',
+          voice: 'Lalu pindah ke kolom Nama Bukti Dukung di portal e-Kinerja B K N sebelah kanan, dan tempel judulnya.',
+          caption: '<strong>Beat 2/4:</strong> Tempel (Paste) ke kolom <strong>Nama Bukti Dukung</strong> di portal BKN.',
+          targetId: 'hs7PasteJudul',
+          cursorText: '2. Tempel Judul di BKN',
+          cam: { x: -80, y: 10, scale: 1.08 },
+          click: true,
+          onBeat: function () {
+            if ($('hs7PasteJudul')) {
+              $('hs7PasteJudul').textContent = 'Laporan Pelayanan Loket Hari Rabu 6 Nov';
+              $('hs7PasteJudul').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Kembali ke e-Kinku (kiri), tekan tombol "🔗 2. Salin Link"',
+          voice: 'Selanjutnya tekan tombol Salin Link di e-Kinku. Link Google Drive ini sudah otomatis terbuka izin lihatnya untuk atasan Anda.',
+          caption: '<strong>Beat 3/4:</strong> Tekan tombol <strong>🔗 Salin Link</strong> di e-Kinku.',
+          targetId: 'hs7CopyLink',
+          cursorText: '3. Klik Salin Link',
+          cam: { x: 80, y: -10, scale: 1.08 },
+          click: true,
+          onBeat: function () {
+            if ($('hs7CopyLink')) {
+              $('hs7CopyLink').textContent = '✓ Link Tersalin';
+              $('hs7CopyLink').classList.add('ok');
+            }
+          }
+        },
+        {
+          label: 'Tempel ke kolom "Link Google Drive" di portal BKN — Selesai!',
+          voice: 'Tempelkan link tersebut ke kolom Bukti Dukung di portal B K N. Selesai dalam hitungan detik!',
+          caption: '<strong>Beat 4/4:</strong> Tempel (Paste) ke kolom <strong>Link Google Drive</strong> di portal BKN. Beres!',
+          targetId: 'hs7PasteLink',
+          cursorText: '4. Tempel Link di BKN!',
+          cam: { x: -70, y: -15, scale: 1.08 },
+          click: true,
+          onBeat: function () {
+            if ($('hs7PasteLink')) {
+              $('hs7PasteLink').textContent = 'https://drive.google.com/file/d/1xK9mP2.../view?usp=sharing';
+              $('hs7PasteLink').classList.add('filled');
+            }
+            if ($('mockBknSuccess')) $('mockBknSuccess').style.display = 'block';
+          }
+        }
+      ],
+      practiceOrder: ['hs7CopyJudul', 'hs7PasteJudul', 'hs7CopyLink', 'hs7PasteLink']
+    },
+    {
+      slug: 'langkah-8',
+      shortLabel: '8. Tips Harian',
+      kicker: 'LANGKAH 8 DARI 8',
+      title: 'Tips Memakai Sehari-hari (HP, Laptop & Arsip Bulan Lalu)',
+      summary: 'Gunakan kebiasaan praktis ini: foto kegiatan dari HP setiap selesai bertugas, lalu saat mengisi SKP di laptop, buka e-Kinku berdampingan (split-view) dengan portal BKN untuk menyalin semua link dengan cepat.',
+      tip: '🔁 Punya kegiatan rutin harian? Gunakan tombol "Duplikat" agar judul kegiatan langsung disalin ke hari berikutnya tanpa mengetik ulang!',
+      layerId: 'layer8',
+      splitDesktop: true,
+      urlText: '🖥️ Tips Sehari-hari: Split-View Desktop, Duplikat & Cari Arsip',
+      beats: [
+        {
+          label: 'Cari cepat berkas bulan ini lewat kotak "Cari dokumen..."',
+          voice: 'Langkah kedelapan: Tips memakai sehari-hari. Gunakan kotak pencarian untuk menemukan dokumen apa pun hanya dalam satu detik.',
+          caption: 'Ketik kata kunci di kotak <strong>🔍 Cari dokumen...</strong> untuk menemukan berkas seketika.',
+          targetId: 'hs8SearchInput',
+          cursorText: '1. Cari Cepat Dokumen',
+          cam: { x: 75, y: 20, scale: 1.08 },
+          click: true,
+          onBeat: function () {
+            if ($('hs8SearchInput')) {
+              $('hs8SearchInput').textContent = '🔍 "Pelayanan Loket" — 1 dokumen ditemukan';
+              $('hs8SearchInput').classList.add('filled');
+            }
+          }
+        },
+        {
+          label: 'Gunakan tombol "Duplikat" untuk kegiatan rutin harian',
+          voice: 'Jika Anda memiliki kegiatan rutin harian, tekan tombol Duplikat agar judul kegiatan langsung disalin ke hari berikutnya.',
+          caption: 'Tekan <strong>🔁 Duplikat Kegiatan</strong> untuk menyalin kegiatan rutin ke hari esok.',
+          targetId: 'hs8DupBtn',
+          cursorText: '2. Duplikat Rutin',
+          cam: { x: 75, y: -5, scale: 1.1 },
+          click: true
+        },
+        {
+          label: 'Buka Kalender di Menu (☰) untuk mencari berkas bulan lalu',
+          voice: 'Untuk melihat kembali berkas bulan lalu, tekan tombol Buka Kalender di menu samping lalu pilih bulan dan tanggalnya.',
+          caption: 'Tekan <strong>📅 Buka Kalender</strong> untuk membuka arsip bukti dukung bulan-bulan sebelumnya.',
+          targetId: 'hs8CalBtn',
+          cursorText: '3. Cek Arsip Bulan Lalu',
+          cam: { x: 65, y: -10, scale: 1.1 },
+          click: true
+        }
+      ],
+      practiceOrder: ['hs8SearchInput', 'hs8DupBtn', 'hs8CalBtn']
+    },
+    {
+      slug: 'penutup',
+      shortLabel: 'Penutup & Siap',
+      kicker: 'PENUTUP TUTORIAL',
+      title: 'Selamat! Kamu Sudah Siap Memakai e-Kinku',
+      summary: 'Anda telah menyelesaikan seluruh alur penggunaan e-Kinku. Silakan lengkapi daftar periksa "Kamu Sudah Siap" di bawah halaman ini, baca FAQ bila ada kendala, atau langsung buka aplikasi e-Kinku.',
+      tip: '💬 Jika ada pertanyaan kapan saja, tim CS kami siap membantu lewat WhatsApp di nomor ' + CONFIG.WA_CS_DISPLAY + '.',
+      layerId: 'layer9',
+      splitDesktop: false,
+      urlText: '🔒 ekinerja.biz.id — Siap Digunakan',
+      beats: [
+        {
+          label: 'Klik "Buka Aplikasi e-Kinku Sekarang" untuk mulai memakai',
+          voice: 'Selamat! Anda sudah menguasai seluruh langkah penggunaan e-Kinku. Silakan tekan tombol Buka Aplikasi e-Kinku Sekarang atau hubungi WhatsApp C S jika membutuhkan bantuan.',
+          caption: '🎉 <strong>Tutorial Selesai!</strong> Klik <strong>Buka Aplikasi e-Kinku Sekarang</strong> atau <strong>Coba Mode Demo</strong>.',
+          targetId: 'hs9GoApp',
+          cursorText: 'Siap Pakai Sekarang!',
+          cam: { x: 0, y: 0, scale: 1.05 }
+        }
+      ],
+      practiceOrder: ['hs9GoApp']
+    }
+  ];
+
+  /* ==========================================================================
+     STATE & PENYIMPANAN LOKAL (localStorage)
+     ========================================================================== */
+  var state = {
+    currentStep: 0,
+    currentBeat: 0,
+    mode: 'watch',        /* 'watch' | 'practice' */
+    isPlaying: true,
+    voiceEnabled: true,
+    practiceIdx: 0,
+    completedSteps: {},   /* { 'langkah-1': true, ... } */
+    readyChecks: {}       /* { 'akun_aktif': true, ... } */
+  };
+
+  var beatTimer = null;
+  var audioCtx = null;
+  var idVoice = null;
+
+  function loadProgress() {
+    try {
+      var raw = localStorage.getItem(CONFIG.STORAGE_KEY);
+      if (!raw) return null;
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object') {
+        state.completedSteps = parsed.completedSteps || {};
+        state.readyChecks = parsed.readyChecks || {};
+        return parsed;
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  function saveProgress() {
+    try {
+      var payload = {
+        lastStep: state.currentStep,
+        completedSteps: state.completedSteps,
+        readyChecks: state.readyChecks,
+        updatedAt: Date.now()
+      };
+      localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(payload));
+    } catch (e) {}
+  }
+
+  /* ==========================================================================
+     SUARA PEMANDU BAHASA INDONESIA (Web Speech API) + EFEK BUNYI KLIK
+     ========================================================================== */
+  function pickIndonesianVoice() {
+    if (!('speechSynthesis' in window)) return null;
+    var voices = window.speechSynthesis.getVoices() || [];
+    for (var i = 0; i < voices.length; i++) {
+      var lang = (voices[i].lang || '').toLowerCase();
+      if (lang.indexOf('id') === 0 || lang.indexOf('ind') === 0) {
+        return voices[i];
+      }
+    }
+    return null;
+  }
+
+  if ('speechSynthesis' in window) {
+    idVoice = pickIndonesianVoice();
+    if (window.speechSynthesis.onvoiceschanged !== undefined) {
+      window.speechSynthesis.onvoiceschanged = function () {
+        idVoice = pickIndonesianVoice();
+      };
+    }
+  }
+
+  function stopVoice() {
+    clearTimeout(beatTimer);
+    if ('speechSynthesis' in window) {
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    }
+  }
+
+  function playSfx(type) {
+    if (!state.voiceEnabled) return;
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      if (!audioCtx) audioCtx = new Ctx();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      var now = audioCtx.currentTime;
+      var osc = audioCtx.createOscillator();
+      var gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      if (type === 'click') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(540, now);
+        osc.frequency.exponentialRampToValueAtTime(240, now + 0.055);
+        gain.gain.setValueAtTime(0.07, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.055);
+        osc.start(now);
+        osc.stop(now + 0.06);
+      } else if (type === 'ok') {
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(523.25, now);
+        osc.frequency.setValueAtTime(783.99, now + 0.08);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+        osc.start(now);
+        osc.stop(now + 0.26);
+      } else if (type === 'warn') {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, now);
+        gain.gain.setValueAtTime(0.05, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
+        osc.start(now);
+        osc.stop(now + 0.15);
+      }
+    } catch (e) {}
+  }
+
+  /* ==========================================================================
+     GERAKAN KAMERA PANGGUNG & KURSOR ANIMASI
+     ========================================================================== */
+  function moveCamera(cam) {
+    var rig = $('cameraRig');
+    if (!rig) return;
+    if (!cam || window.innerWidth < 640) {
+      rig.style.transform = 'translate3d(0px, 0px, 0) scale(1)';
+      return;
+    }
+    var tx = cam.x || 0;
+    var ty = cam.y || 0;
+    var sc = cam.scale || 1;
+    rig.style.transform = 'translate3d(' + tx + 'px, ' + ty + 'px, 0) scale(' + sc + ')';
+  }
+
+  function moveStageCursorTo(targetId, pillText, doClick) {
+    var cursor = $('stageCursor');
+    var frame = $('deviceFrame');
+    var target = $(targetId);
+    if (!cursor || !frame || !target) {
+      if (cursor) cursor.classList.remove('visible', 'clicking');
+      return;
+    }
+
+    var frameRect = frame.getBoundingClientRect();
+    var targetRect = target.getBoundingClientRect();
+    if (!frameRect.width || !targetRect.width) return;
+
+    /* Hitung posisi relatif di dalam deviceFrame (mengakomodasi skala kamera) */
+    var scaleRatio = frameRect.width / frame.offsetWidth || 1;
+    var x = (targetRect.left - frameRect.left) / scaleRatio + Math.min(targetRect.width * 0.55 / scaleRatio, 120);
+    var y = (targetRect.top - frameRect.top) / scaleRatio + (targetRect.height * 0.55 / scaleRatio);
+
+    x = Math.max(18, Math.min(frame.offsetWidth - 110, x));
+    y = Math.max(24, Math.min(frame.offsetHeight - 36, y));
+
+    if ($('cursorPill') && pillText) $('cursorPill').textContent = pillText;
+    cursor.classList.add('visible');
+    cursor.classList.remove('clicking');
+    cursor.style.transform = 'translate3d(' + Math.round(x) + 'px, ' + Math.round(y) + 'px, 0)';
+
+    if (doClick) {
+      setTimeout(function () {
+        cursor.classList.add('clicking');
+        playSfx('click');
+        setTimeout(function () { cursor.classList.remove('clicking'); }, 320);
+      }, 620);
+    }
+  }
+
+  function resetMockupStates() {
+    if ($('hs1EmailInput')) { $('hs1EmailInput').textContent = 'ketik email Gmail...'; $('hs1EmailInput').classList.remove('filled'); }
+    if ($('hs2OtpInput')) { $('hs2OtpInput').textContent = '______'; $('hs2OtpInput').classList.remove('filled'); }
+    if ($('hs3CodeInput')) { $('hs3CodeInput').textContent = 'Punya 6 angka Kode Aktivasi?'; $('hs3CodeInput').classList.remove('filled'); }
+    if ($('mockPendingBadge')) { $('mockPendingBadge').textContent = 'Menunggu Aktivasi'; $('mockPendingBadge').className = 'ek-chip'; }
+    if ($('hs5PassInput')) { $('hs5PassInput').textContent = 'Ketik kata sandi baru (min. 8 karakter)...'; $('hs5PassInput').classList.remove('filled'); }
+    if ($('mockCompressBadge')) $('mockCompressBadge').style.display = 'none';
+    if ($('hs6JudulInput')) { $('hs6JudulInput').textContent = 'Klik untuk mengisi judul kegiatan yang jelas...'; $('hs6JudulInput').classList.remove('filled'); }
+    if ($('hs7CopyJudul')) { $('hs7CopyJudul').textContent = '📋 1. Salin Judul'; $('hs7CopyJudul').classList.remove('ok'); }
+    if ($('hs7CopyLink')) { $('hs7CopyLink').textContent = '🔗 2. Salin Link'; $('hs7CopyLink').classList.remove('ok'); }
+    if ($('hs7PasteJudul')) { $('hs7PasteJudul').textContent = '(Klik untuk Tempel Judul di sini)'; $('hs7PasteJudul').classList.remove('filled'); }
+    if ($('hs7PasteLink')) { $('hs7PasteLink').textContent = '(Klik untuk Tempel Link Drive di sini)'; $('hs7PasteLink').classList.remove('filled'); }
+    if ($('mockBknSuccess')) $('mockBknSuccess').style.display = 'none';
+    if ($('hs8SearchInput')) { $('hs8SearchInput').textContent = '🔍 Cari dokumen bulan ini atau bulan lalu...'; $('hs8SearchInput').classList.remove('filled'); }
+
+    /* Status chip di pojok kanan atas simulasi */
+    if ($('mockStatusChip')) {
+      if (state.currentStep >= 5) {
+        $('mockStatusChip').textContent = '● Siap';
+        $('mockStatusChip').className = 'ek-chip ok';
+      } else {
+        $('mockStatusChip').textContent = '● Hubungkan Drive';
+        $('mockStatusChip').className = 'ek-chip';
+      }
+    }
+
+    /* Bersihkan highlight hotspot latihan */
+    var oldHs = document.querySelectorAll('.hotspot-target');
+    for (var i = 0; i < oldHs.length; i++) oldHs[i].classList.remove('hotspot-target');
+  }
+
+  /* ==========================================================================
+     RENDER JALUR PROGRES (STEP RAIL) & DAFTAR PERIKSA
+     ========================================================================== */
+  function renderStepRail() {
+    var rail = $('stepRail');
+    if (!rail) return;
+
+    var doneCount = 0;
+    for (var k = 0; k < STEPS.length; k++) {
+      if (state.completedSteps[STEPS[k].slug]) doneCount++;
+    }
+
+    var pct = Math.max(8, Math.round((doneCount / STEPS.length) * 100));
+    if ($('railBarFill')) $('railBarFill').style.width = pct + '%';
+    if ($('railProgressTxt')) {
+      $('railProgressTxt').textContent = 'Progres Belajar: ' + doneCount + ' dari ' + STEPS.length + ' bagian dikuasai (' + pct + '%)';
+    }
+
+    var html = '';
+    for (var i = 0; i < STEPS.length; i++) {
+      var st = STEPS[i];
+      var isAct = i === state.currentStep;
+      var isDone = !!state.completedSteps[st.slug];
+      var cls = 'step-node' + (isAct ? ' active' : '') + (isDone ? ' done' : '');
+      var badgeTxt = isDone ? '✓' : (i === 0 ? '★' : (i === STEPS.length - 1 ? '🏁' : i));
+      html += '<button type="button" class="' + cls + '" data-step-idx="' + i + '" role="tab" aria-selected="' + (isAct ? 'true' : 'false') + '">' +
+        '<span class="sn-num">' + badgeTxt + '</span>' +
+        '<span>' + st.shortLabel + '</span>' +
+        '</button>';
+    }
+    rail.innerHTML = html;
+  }
+
+  function renderBeatList() {
+    var step = STEPS[state.currentStep];
+    var box = $('beatList');
+    if (!step || !box) return;
+    var html = '';
+    for (var i = 0; i < step.beats.length; i++) {
+      var b = step.beats[i];
+      var isAct = i === state.currentBeat;
+      var isDone = i < state.currentBeat;
+      var cls = 'beat-item' + (isAct ? ' active' : '') + (isDone ? ' done' : '');
+      html += '<div class="' + cls + '" data-beat-idx="' + i + '">' +
+        '<span class="beat-num">' + (isDone ? '✓' : (i + 1)) + '</span>' +
+        '<span>' + b.label + '</span>' +
+        '</div>';
+    }
+    box.innerHTML = html;
+  }
+
+  /* ==========================================================================
+     JALANKAN BEAT ANIMASI (MODE TONTON OTOMATIS)
+     ========================================================================== */
+  function runBeat(beatIdx) {
+    stopVoice();
+    var step = STEPS[state.currentStep];
+    if (!step) return;
+    if (beatIdx < 0 || beatIdx >= step.beats.length) beatIdx = 0;
+    state.currentBeat = beatIdx;
+
+    renderBeatList();
+    var beat = step.beats[beatIdx];
+    if (!beat) return;
+
+    if (typeof beat.onBeat === 'function') {
+      beat.onBeat();
+    }
+
+    if ($('stageCaptionTxt')) $('stageCaptionTxt').innerHTML = beat.caption;
+    if ($('practiceFeedback')) {
+      $('practiceFeedback').className = 'practice-feedback';
+      $('practiceFeedback').textContent = 'Animasi Beat ' + (beatIdx + 1) + ' / ' + step.beats.length;
+    }
+
+    moveCamera(beat.cam);
+    setTimeout(function () {
+      moveStageCursorTo(beat.targetId, beat.cursorText, !!beat.click);
+    }, 260);
+
+    if (!state.isPlaying || state.mode !== 'watch') return;
+
+    var estMs = Math.max(4000, beat.voice.length * 66);
+    var advanced = false;
+
+    function nextBeatOrWait() {
+      if (advanced || !state.isPlaying || state.mode !== 'watch') return;
+      advanced = true;
+      clearTimeout(beatTimer);
+      if (beatIdx + 1 < step.beats.length) {
+        beatTimer = setTimeout(function () {
+          runBeat(beatIdx + 1);
+        }, 450);
+      } else {
+        /* Selesai semua beat di langkah ini: kembalikan kamera ke tengah */
+        moveCamera({ x: 0, y: 0, scale: 1 });
+        if ($('practiceFeedback')) {
+          $('practiceFeedback').className = 'practice-feedback ok';
+          $('practiceFeedback').textContent = '✓ Selesai! Klik "Mode Latihan" untuk mencoba sendiri';
+        }
+      }
+    }
+
+    if (state.voiceEnabled && 'speechSynthesis' in window && typeof window.SpeechSynthesisUtterance === 'function') {
+      try {
+        var u = new window.SpeechSynthesisUtterance(beat.voice);
+        u.lang = 'id-ID';
+        if (!idVoice) idVoice = pickIndonesianVoice();
+        if (idVoice) u.voice = idVoice;
+        u.rate = 1.0;
+        u.onend = function () { setTimeout(nextBeatOrWait, 450); };
+        u.onerror = function () { setTimeout(nextBeatOrWait, 1200); };
+        window.speechSynthesis.speak(u);
+        beatTimer = setTimeout(nextBeatOrWait, estMs + 1800);
+        return;
+      } catch (e) {}
+    }
+
+    beatTimer = setTimeout(nextBeatOrWait, estMs);
+  }
+
+  /* ==========================================================================
+     MODE LATIHAN INTERAKTIF (PENGGUNA MENEKAN HOTSPOT SENDIRI)
+     ========================================================================== */
+  function highlightCurrentPracticeHotspot() {
+    var oldHs = document.querySelectorAll('.hotspot-target');
+    for (var i = 0; i < oldHs.length; i++) oldHs[i].classList.remove('hotspot-target');
+
+    var step = STEPS[state.currentStep];
+    if (!step || !step.practiceOrder) return;
+    var targetId = step.practiceOrder[state.practiceIdx];
+    var el = $(targetId);
+    if (el) {
+      el.classList.add('hotspot-target');
+      moveCamera({ x: 0, y: 0, scale: 1.03 });
+    }
+  }
+
+  function startPracticeMode() {
+    stopVoice();
+    state.mode = 'practice';
+    state.practiceIdx = 0;
+    resetMockupStates();
+
+    if ($('btnModeWatch')) $('btnModeWatch').classList.remove('active');
+    if ($('btnModePractice')) $('btnModePractice').classList.add('active');
+    if ($('stageCursor')) $('stageCursor').classList.remove('visible');
+
+    var step = STEPS[state.currentStep];
+    highlightCurrentPracticeHotspot();
+
+    if ($('stageCaptionTxt')) {
+      $('stageCaptionTxt').innerHTML = '👆 <strong>Mode Latihan Aktif:</strong> Tekan elemen yang <strong>berkedip biru</strong> pada panggung di atas sesuai urutan langkah!';
+    }
+    if ($('practiceFeedback')) {
+      $('practiceFeedback').className = 'practice-feedback';
+      $('practiceFeedback').textContent = 'Target 1 dari ' + (step.practiceOrder ? step.practiceOrder.length : 1);
+    }
+  }
+
+  function handleStagePracticeClick(ev) {
+    var hsEl = ev.target.closest('[data-hs]');
+    if (!hsEl) return;
+
+    /* Jika sedang di Mode Tonton dan pengguna menekan elemen di panggung, otomatis beralih ke Mode Latihan */
+    if (state.mode !== 'practice') {
+      startPracticeMode();
+    }
+
+    var clickedId = hsEl.getAttribute('data-hs');
+    var step = STEPS[state.currentStep];
+    if (!step || !step.practiceOrder) return;
+    var expectedId = step.practiceOrder[state.practiceIdx];
+
+    if (clickedId !== expectedId) {
+      playSfx('warn');
+      if ($('practiceFeedback')) {
+        $('practiceFeedback').className = 'practice-feedback warn';
+        $('practiceFeedback').textContent = 'Belum tepat 😊 — Klik tombol yang berkedip biru dulu ya!';
+      }
+      return;
+    }
+
+    /* Benar! Jalankan efek visual beat terkait */
+    playSfx('click');
+    for (var b = 0; b < step.beats.length; b++) {
+      if (step.beats[b].targetId === clickedId && typeof step.beats[b].onBeat === 'function') {
+        step.beats[b].onBeat();
+      }
+    }
+
+    state.practiceIdx++;
+    if (state.practiceIdx < step.practiceOrder.length) {
+      highlightCurrentPracticeHotspot();
+      if ($('practiceFeedback')) {
+        $('practiceFeedback').className = 'practice-feedback ok';
+        $('practiceFeedback').textContent = 'Bagus! Lanjut klik target ' + (state.practiceIdx + 1) + ' dari ' + step.practiceOrder.length;
+      }
+    } else {
+      /* Seluruh urutan latihan di langkah ini berhasil! */
+      var oldHs = document.querySelectorAll('.hotspot-target');
+      for (var i = 0; i < oldHs.length; i++) oldHs[i].classList.remove('hotspot-target');
+
+      playSfx('ok');
+      state.completedSteps[step.slug] = true;
+      if ($('chkStepDone')) $('chkStepDone').checked = true;
+      saveProgress();
+      renderStepRail();
+
+      if ($('stageCaptionTxt')) {
+        $('stageCaptionTxt').innerHTML = '🎉 <strong>Luar Biasa!</strong> Anda berhasil menyelesaikan latihan <strong>' + step.shortLabel + '</strong> dengan urutan yang benar!';
+      }
+      if ($('practiceFeedback')) {
+        $('practiceFeedback').className = 'practice-feedback ok';
+        $('practiceFeedback').textContent = '✅ Latihan Berhasil! Silakan klik "Berikutnya →"';
+      }
+    }
+  }
+
+  /* ==========================================================================
+     BERPINDAH LANGKAH (DENGAN DEEP-LINK HASH #langkah-1 .. #langkah-8)
+     ========================================================================== */
+  function goToStep(idx, updateHash) {
+    stopVoice();
+    if (idx < 0) idx = 0;
+    if (idx >= STEPS.length) idx = STEPS.length - 1;
+
+    state.currentStep = idx;
+    state.currentBeat = 0;
+    state.mode = 'watch';
+
+    var step = STEPS[idx];
+    if (updateHash !== false) {
+      try {
+        history.replaceState(null, '', '#' + step.slug);
+      } catch (e) {
+        location.hash = step.slug;
+      }
+    }
+
+    /* Update teks panduan kiri */
+    if ($('stepKicker')) $('stepKicker').textContent = step.kicker;
+    if ($('stepTitle')) $('stepTitle').textContent = step.title;
+    if ($('stepSummary')) $('stepSummary').textContent = step.summary;
+    if ($('stepTip')) $('stepTip').textContent = step.tip;
+    if ($('chkStepDone')) $('chkStepDone').checked = !!state.completedSteps[step.slug];
+    if ($('btnPrevStep')) $('btnPrevStep').disabled = idx === 0;
+    if ($('btnNextStep')) {
+      $('btnNextStep').textContent = idx === STEPS.length - 1 ? 'Selesai & Lihat Checklist ↓' : 'Berikutnya →';
+    }
+
+    if ($('btnModeWatch')) $('btnModeWatch').classList.add('active');
+    if ($('btnModePractice')) $('btnModePractice').classList.remove('active');
+
+    /* Update panggung (Mobile vs Desktop Split-View) */
+    var frame = $('deviceFrame');
+    if (frame) {
+      frame.classList.toggle('desktop-split', !!step.splitDesktop);
+    }
+    if ($('stageUrlBar')) $('stageUrlBar').textContent = step.urlText;
+
+    /* Tampilkan layer aktif di panggung */
+    var layers = document.querySelectorAll('.ek-layer');
+    for (var l = 0; l < layers.length; l++) {
+      layers[l].classList.toggle('visible', layers[l].id === step.layerId);
+    }
+
+    resetMockupStates();
+    saveProgress();
+    renderStepRail();
+    runBeat(0);
+  }
+
+  function stepIndexFromHash(hashStr) {
+    var clean = String(hashStr || '').replace(/^#/, '').trim().toLowerCase();
+    if (!clean) return -1;
+    for (var i = 0; i < STEPS.length; i++) {
+      if (STEPS[i].slug === clean) return i;
+    }
+    return -1;
+  }
+
+  /* ==========================================================================
+     EVENT LISTENERS & INISIALISASI
+     ========================================================================== */
+  applyConfigToDOM();
+
+  var saved = loadProgress();
+
+  /* Sinkronisasi daftar periksa penutup ("Kamu Sudah Siap") */
+  var readyBoxes = document.querySelectorAll('[data-ready-chk]');
+  for (var r = 0; r < readyBoxes.length; r++) {
+    var key = readyBoxes[r].getAttribute('data-ready-chk');
+    readyBoxes[r].checked = !!state.readyChecks[key];
+    readyBoxes[r].addEventListener('change', function () {
+      var k = this.getAttribute('data-ready-chk');
+      state.readyChecks[k] = this.checked;
+      saveProgress();
+    });
+  }
+
+  /* Klik node pada jalur progres */
+  if ($('stepRail')) {
+    $('stepRail').addEventListener('click', function (ev) {
+      var btn = ev.target.closest('button[data-step-idx]');
+      if (!btn) return;
+      var idx = parseInt(btn.getAttribute('data-step-idx'), 10) || 0;
+      goToStep(idx, true);
+    });
+  }
+
+  /* Klik item beat di kolom kiri */
+  if ($('beatList')) {
+    $('beatList').addEventListener('click', function (ev) {
+      var item = ev.target.closest('[data-beat-idx]');
+      if (!item) return;
+      var bIdx = parseInt(item.getAttribute('data-beat-idx'), 10) || 0;
+      state.mode = 'watch';
+      if ($('btnModeWatch')) $('btnModeWatch').classList.add('active');
+      if ($('btnModePractice')) $('btnModePractice').classList.remove('active');
+      runBeat(bIdx);
+    });
+  }
+
+  /* Tombol Mode Tonton vs Mode Latihan */
+  if ($('btnModeWatch')) {
+    $('btnModeWatch').addEventListener('click', function () {
+      state.mode = 'watch';
+      state.isPlaying = true;
+      this.classList.add('active');
+      if ($('btnModePractice')) $('btnModePractice').classList.remove('active');
+      resetMockupStates();
+      runBeat(0);
+    });
+  }
+  if ($('btnModePractice')) {
+    $('btnModePractice').addEventListener('click', startPracticeMode);
+  }
+
+  /* Klik hotspot di dalam panggung */
+  if ($('deviceFrame')) {
+    $('deviceFrame').addEventListener('click', function (ev) {
+      /* Jangan cegah tautan eksternal pada langkah penutup */
+      if (ev.target.closest('a[href]')) return;
+      handleStagePracticeClick(ev);
+    });
+  }
+
+  /* Checkbox "Saya sudah paham & bisa langkah ini" */
+  if ($('chkStepDone')) {
+    $('chkStepDone').addEventListener('change', function () {
+      var slug = STEPS[state.currentStep].slug;
+      state.completedSteps[slug] = this.checked;
+      saveProgress();
+      renderStepRail();
+      if (this.checked) playSfx('ok');
+    });
+  }
+
+  /* Navigasi Sebelumnya / Putar Ulang / Berikutnya */
+  if ($('btnPrevStep')) {
+    $('btnPrevStep').addEventListener('click', function () {
+      if (state.currentStep > 0) goToStep(state.currentStep - 1, true);
+    });
+  }
+  if ($('btnReplayStep')) {
+    $('btnReplayStep').addEventListener('click', function () {
+      state.mode = 'watch';
+      state.isPlaying = true;
+      if ($('btnModeWatch')) $('btnModeWatch').classList.add('active');
+      if ($('btnModePractice')) $('btnModePractice').classList.remove('active');
+      resetMockupStates();
+      runBeat(0);
+    });
+  }
+  if ($('btnNextStep')) {
+    $('btnNextStep').addEventListener('click', function () {
+      /* Otomatis tandai langkah ini selesai saat klik Berikutnya */
+      var curSlug = STEPS[state.currentStep].slug;
+      state.completedSteps[curSlug] = true;
+      saveProgress();
+      if (state.currentStep + 1 < STEPS.length) {
+        goToStep(state.currentStep + 1, true);
+      } else {
+        var closingEl = $('bagian-penutup');
+        if (closingEl) closingEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  /* Kontrol Jeda & Suara di atas Panggung */
+  if ($('btnStagePlayPause')) {
+    $('btnStagePlayPause').addEventListener('click', function () {
+      state.isPlaying = !state.isPlaying;
+      this.textContent = state.isPlaying ? '⏸️ Jeda Animasi' : '▶️ Lanjut Animasi';
+      this.classList.toggle('on', state.isPlaying);
+      if (state.isPlaying && state.mode === 'watch') {
+        runBeat(state.currentBeat);
+      } else {
+        stopVoice();
+      }
+    });
+  }
+
+  if ($('btnStageVoice')) {
+    $('btnStageVoice').addEventListener('click', function () {
+      state.voiceEnabled = !state.voiceEnabled;
+      this.textContent = state.voiceEnabled ? '🔊 Suara Pemandu: ON' : '🔇 Suara Pemandu: OFF';
+      this.classList.toggle('on', state.voiceEnabled);
+      if (!state.voiceEnabled) stopVoice();
+      else if (state.isPlaying && state.mode === 'watch') runBeat(state.currentBeat);
+    });
+  }
+
+  /* Bagikan Tautan Langkah Ini ke WhatsApp */
+  if ($('btnShareStepWa')) {
+    $('btnShareStepWa').addEventListener('click', function () {
+      var st = STEPS[state.currentStep];
+      var shareUrl = CONFIG.TUTORIAL_SITE_URL + '/#' + st.slug;
+      var text = 'Panduan ' + CONFIG.APP_NAME + ' — ' + st.title + ': ' + shareUrl;
+      window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    });
+  }
+
+  /* Mode Terang / Gelap */
+  if ($('btnThemeToggle')) {
+    $('btnThemeToggle').addEventListener('click', function () {
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      this.textContent = next === 'dark' ? '☀️ Mode' : '🌙 Mode';
+    });
+  }
+
+  /* Perubahan Hash URL (#langkah-1, dll) */
+  window.addEventListener('hashchange', function () {
+    var idx = stepIndexFromHash(location.hash);
+    if (idx !== -1 && idx !== state.currentStep) {
+      goToStep(idx, false);
+    }
+  });
+
+  window.addEventListener('pagehide', stopVoice);
+  window.addEventListener('beforeunload', stopVoice);
+
+  /* Tentukan langkah awal: dari URL hash (#langkah-x) atau tampilkan banner lanjutkan */
+  var hashIdx = stepIndexFromHash(location.hash);
+  if (hashIdx !== -1) {
+    goToStep(hashIdx, false);
+  } else {
+    if (saved && typeof saved.lastStep === 'number' && saved.lastStep > 0 && saved.lastStep < STEPS.length) {
+      var banner = $('resumeBanner');
+      if (banner) {
+        banner.hidden = false;
+        if ($('resumeStepName')) $('resumeStepName').textContent = STEPS[saved.lastStep].shortLabel + ' (' + STEPS[saved.lastStep].title + ')';
+        var cnt = Object.keys(state.completedSteps).filter(function (k) { return state.completedSteps[k]; }).length;
+        if ($('resumeDoneCount')) $('resumeDoneCount').textContent = cnt;
+        if ($('btnResumeGo')) {
+          $('btnResumeGo').onclick = function () {
+            banner.hidden = true;
+            goToStep(saved.lastStep, true);
+          };
+        }
+        if ($('btnResumeReset')) {
+          $('btnResumeReset').onclick = function () {
+            banner.hidden = true;
+            state.completedSteps = {};
+            saveProgress();
+            goToStep(0, true);
+          };
+        }
+      }
+    }
+    goToStep(0, false);
+  }
+})();
+</script>
+</body>
+</html>
